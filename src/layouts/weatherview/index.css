@@ -1,0 +1,10 @@
+.weatherview {
+  width: 80%;
+}
+.weatherview .main-content {
+  border-radius: 10px;
+  border: 5px solid white;
+  background-color: #eef6fb;
+  box-shadow: 5px;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,9 @@
+.forecasting-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.forecasting-view > div {
+  width: 25%;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,25 @@
+.card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid white;
+  padding-bottom: 10px;
+}
+.card .title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.card .content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card .content .status {
+  padding-left: 16px;
+}
+.card .content .status .temperature::after {
+  content: "\2103";
+}
+/*# sourceMappingURL=index.css.map */
