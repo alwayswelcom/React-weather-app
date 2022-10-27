@@ -1,10 +1,11 @@
+@import "../../App.less";
 .card {
   align-items: center;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
-  border: 1px solid white;
-  padding-bottom: 10px;
+  border: 1px solid @app-color-white;
+  padding-bottom: 16px;
 
   & .title {
     font-weight: 700;
@@ -17,11 +18,20 @@
     flex-wrap: wrap;
     & .status {
       padding-left: 16px;
-      & .temperature {
-        &::after {
-          content: "\2103";
+      
+        & .temperature-normal {
+          font-weight: @app-font-weight-normal;
+          &::after {
+            content: "\00B0";
+          }
         }
-      }
+        & .temperature-bold {
+          font-weight: @app-font-weight-select;
+          font-size: @app-font-big;
+          &::after {
+            content: "\00B0";
+          }
+        }              
     }
   }
 }

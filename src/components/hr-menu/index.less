@@ -1,12 +1,14 @@
-@app-background: #eef6fb;
-@app-font-color-select: #5fb0e8;
-@app-font-color-normal: #000000;
-@app-font-weight-normal: normal;
-@app-font-weight-select: 600;
-@app-font-size: 24px;
-@app-space-big: 16px;
-@app-space-0: 0;
-@app-cursor-pointer: pointer;
+// @app-background: #eef6fb;
+// @app-font-color-select: #5fb0e8;
+// @app-font-color-normal: #000000;
+// @app-font-weight-normal: normal;
+// @app-font-weight-select: 600;
+// @app-font-size: 24px;
+// @app-space-big: 16px;
+// @app-space-0: 0;
+// @app-cursor-pointer: pointer;
+
+@import "../../App.less";
 
 ul {
   align-items: center;
@@ -27,11 +29,11 @@ li {
 .selected {
   color: @app-font-color-select;
   font-weight: @app-font-weight-select;
-  font-size: @app-font-size;
+  font-size: @app-font-normal;
 }
 
 .normal {
   color: @app-font-color-normal;
   font-weight: @app-font-weight-normal;
-  font-size: @app-font-size;
+  font-size: @app-font-normal;
 }

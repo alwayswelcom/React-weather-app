@@ -12,7 +12,7 @@ export default class Card extends React.Component<cardInterface, {}> {
         <div className="content">
           <div className="status-svg">{status.element}</div>
           <div className="status">
-            <div className="temperature">{this.props.temperature}</div>
+            <div className={this.props.label?"temperature-bold":"temperature-normal"}>{this.props.temperature}</div>
             {this.props.label && status.data}
           </div>
         </div>

@@ -1,11 +1,12 @@
-@app-background: #eef6fb;
-@app-space-normal: 5px;
+// @app-background: #eef6fb;
+// @app-space-normal: 5px;
+@import "../../App.less";
 
 .weatherview {
   width: 80%;
   .main-content {
     border-radius: 10px;
-    border: @app-space-normal solid white;
+    border: @app-space-normal solid @app-color-white;
     background-color: @app-background;
     box-shadow: @app-space-normal;
   }
