@@ -41,6 +41,9 @@ class WeatherView extends React.Component<
   };
 
   getWeather = async () => {
+    console.log(
+      `${process.env.REACT_APP_API_URL}latitude=${this.state.lat}&longitude=${this.state.long}&daily=weathercode,temperature_2m_max,rain_sum,showers_sum,snowfall_sum&timezone=America%2FNew_York&start_date=${this.state.startDate}&end_date=${this.state.endDate}`
+    );
     await fetch(
       `${process.env.REACT_APP_API_URL}latitude=${this.state.lat}&longitude=${this.state.long}&daily=weathercode,temperature_2m_max,rain_sum,showers_sum,snowfall_sum&timezone=America%2FNew_York&start_date=${this.state.startDate}&end_date=${this.state.endDate}`
     )
@@ -49,23 +52,19 @@ class WeatherView extends React.Component<
         this.setState({ forcastingData: result });
       });
   };
+  makeTwoDigit = (num: number) => {
+    if (num < 9) return Number("0" + num);
+    else return num;
+  };
   getDates = () => {
     let current_date: Date = new Date();
     let year_c: number = current_date.getFullYear();
-    let month_c: number = Number(
-      String(current_date.getMonth() + 1).padStart(2, "0")
-    );
-    let date_c: number = Number(
-      String(current_date.getDate()).padStart(2, "0")
-    );
-    current_date.setDate(date_c + 4);
+    let month_c: string = String(current_date.getMonth() + 1).padStart(2, "0");
+    let date_c: string = String(current_date.getDate()).padStart(2, "0");    
+    current_date.setDate(Number(date_c) + 4);
     let year_l: number = current_date.getFullYear();
-    let month_l: number = Number(
-      String(current_date.getMonth() + 1).padStart(2, "0")
-    );
-    let date_l: number = Number(
-      String(current_date.getDate()).padStart(2, "0")
-    );
+    let month_l: string = String(current_date.getMonth() + 1).padStart(2, "0");
+    let date_l: string = String(current_date.getDate()).padStart(2, "0");
     this.setState(
       {
         startDate: `${year_c}-${month_c}-${date_c}`,
